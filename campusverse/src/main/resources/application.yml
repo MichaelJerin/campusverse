@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: campusverse
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/campusverse_db
+    username: ${DB_USERNAME:changeme}
+    password: ${DB_PASSWORD:changeme}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      # 'update' is convenient in development, but review generated DDL before trusting it.
+      # switch to 'validate' once the schema is stable, and manage changes manually or via migrations.
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+server:
+  port: 8080
+
+# Custom application properties
+app:
+  jwt:
+    # In production, load this from an environment variable, NEVER hardcode it.
+    secret: ${JWT_SECRET:change-this-to-a-long-random-secret-at-least-256-bits-for-hs256}
+    expiration-ms: 86400000   # 24 hours
+
+  upload:
+    dir: uploads/businesses
+
+  # college email domain allowed to register (per Section 5.1 of the doc)
+  auth:
+    allowed-email-domain: ${COLLEGE_EMAIL_DOMAIN:college.edu}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+
+logging:
+  level:
+    com.campusverse: DEBUG
+    org.springframework.security: INFO

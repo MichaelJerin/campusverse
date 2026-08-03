@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusVerse — Create Account</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="center-shell" style="max-width: 500px;">
+    <div class="auth-logo">CampusVerse</div>
+    <p class="auth-subtitle">Create your campus account</p>
+
+    <div class="card">
+        <div id="errorBox" class="alert alert-error" style="display:none;"></div>
+        <form id="registerForm">
+            <div class="field">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="field">
+                <label for="email">College Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input type="password" id="password" minlength="8" required>
+            </div>
+            <div class="field">
+                <label for="branch">Branch</label>
+                <input type="text" id="branch">
+            </div>
+            <div class="field">
+                <label for="degreeLevel">Degree Level</label>
+                <select id="degreeLevel">
+                    <option value="BACHELOR">Bachelor</option>
+                    <option value="MASTER">Master</option>
+                </select>
+            </div>
+            <div class="field-row">
+                <div class="field">
+                    <label for="batchStartYear">Batch Start Year</label>
+                    <input type="number" id="batchStartYear">
+                </div>
+                <div class="field">
+                    <label for="batchEndYear">Batch End Year</label>
+                    <input type="number" id="batchEndYear">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+        </form>
+    </div>
+
+    <p class="auth-footer">Already have an account? <a href="index.html">Sign in</a></p>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

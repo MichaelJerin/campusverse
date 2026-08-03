@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusVerse — Item Details</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<div class="page-shell" style="max-width: 720px;">
+    <div id="itemCard" class="card" style="margin-bottom: 24px;"></div>
+
+    <div id="claimSection" class="card" style="display:none; margin-bottom: 24px;">
+        <h3 style="margin-bottom:16px;">Claim This Item</h3>
+        <div id="claimError" class="alert alert-error" style="display:none;"></div>
+        <form id="claimForm">
+            <div class="field">
+                <textarea id="claimMessage" placeholder="Why does this item belong to you?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Submit Claim</button>
+        </form>
+    </div>
+
+    <div id="claimsListSection" style="display:none;">
+        <h3 class="section-title">Claims on This Item</h3>
+        <div id="claimsList"></div>
+    </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/item-detail.js"></script>
+</body>
+</html>

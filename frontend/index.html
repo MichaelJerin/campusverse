@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusVerse — Sign In</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="center-shell">
+    <div class="auth-logo">CampusVerse</div>
+    <p class="auth-subtitle">Sign in to your campus account</p>
+
+    <div class="card">
+        <div id="errorBox" class="alert alert-error" style="display:none;"></div>
+        <form id="loginForm">
+            <div class="field">
+                <label for="email">College Email</label>
+                <input type="email" id="email" required autocomplete="email">
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input type="password" id="password" required autocomplete="current-password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+        </form>
+    </div>
+
+    <p class="auth-footer">New here? <a href="register.html">Create an account</a></p>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusVerse — Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<div class="page-shell">
+    <h1 class="page-title" id="greeting"></h1>
+    <p class="page-subtitle">What would you like to do today?</p>
+
+    <div class="module-grid">
+        <a href="items.html" class="module-card">
+            <div class="module-icon">🔎</div>
+            <div class="module-title">Lost & Found</div>
+            <div class="module-desc">Report items you've found, or search the board for something you've lost.</div>
+        </a>
+
+        <div class="module-card disabled">
+            <span class="module-badge">Coming Soon</span>
+            <div class="module-icon">🤝</div>
+            <div class="module-title">Peer Mentorship</div>
+            <div class="module-desc">Connect with students who can teach — or learn from — a skill you care about.</div>
+        </div>
+
+        <div class="module-card disabled">
+            <span class="module-badge">Coming Soon</span>
+            <div class="module-icon">🏪</div>
+            <div class="module-title">Local Business Discovery</div>
+            <div class="module-desc">Explore student-curated shops and eateries near campus.</div>
+        </div>
+
+        <div class="module-card disabled">
+            <span class="module-badge">Coming Soon</span>
+            <div class="module-icon">💬</div>
+            <div class="module-title">Confession Wall</div>
+            <div class="module-desc">Share anonymous confessions and feedback about campus life.</div>
+        </div>
+    </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script>
+    requireAuth();
+    renderNavbar("dashboard");
+    document.getElementById("greeting").textContent = "Hi, " + getUserName();
+</script>
+</body>
+</html>
