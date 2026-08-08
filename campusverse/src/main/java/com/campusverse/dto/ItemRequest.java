@@ -17,8 +17,5 @@ public class ItemRequest {
     @NotBlank(message = "Location is required")
     private String Location;
 
-    @NotBlank(message = "Contact number is requried")
-    private String contactNumber;
-
     private LocalDate eventDate;
 }

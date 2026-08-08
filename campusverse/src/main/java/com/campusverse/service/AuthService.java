@@ -46,6 +46,7 @@ public class AuthService {
                 .degreeLevel(request.getDegreeLevel())
                 .batchStartYear(request.getBatchStartYear())
                 .batchEndYear(request.getBatchEndYear())
+                .phoneNumber(request.getPhoneNumber().trim())
                 .build();
 
         userRepository.save(user);

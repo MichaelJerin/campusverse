@@ -170,3 +170,43 @@ h1, h2, h3 {
   .search-bar { grid-template-columns: 1fr; }
   .nav-links { display: none; }
 }
+
+.tag {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 12px; border-radius: 980px; font-size: 13px; font-weight: 600;
+    margin: 4px 6px 4px 0;
+}
+.tag-mentor { background: var(--success-bg); color: var(--success); }
+.tag-learner { background: #eef4ff; color: var(--accent); }
+
+.mentor-card { padding: 20px; margin-bottom: 14px; }
+.mentor-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.score-badge { font-size: 12px; font-weight: 700; color: var(--accent); background: #eef4ff; padding: 4px 10px; border-radius: 980px; }
+
+.tabs { display: flex; margin-bottom: 24px; border-bottom: 1px solid var(--border); }
+.tab-btn {
+    padding: 10px 4px; margin-right: 28px; font-size: 15px; font-weight: 600;
+    color: var(--text-secondary); border: none; background: none; cursor: pointer;
+    border-bottom: 2px solid transparent; font-family: inherit;
+}
+.tab-btn.active { color: var(--text); border-bottom-color: var(--accent); }
+
+.modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.4);
+    display: flex; align-items: center; justify-content: center; z-index: 200;
+}
+.modal-box { background: var(--surface); border-radius: var(--radius-lg); padding: 32px; max-width: 440px; width: 90%; box-shadow: var(--shadow-lg); }
+
+.phone-reveal { background: var(--success-bg); color: var(--success); padding: 10px 14px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; margin-top: 12px; }
+
+.field select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236e6e73' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 16px;
+    padding-right: 40px;
+    cursor: pointer;
+}

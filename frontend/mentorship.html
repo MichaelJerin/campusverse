@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusVerse — Peer Mentorship</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<div class="page-shell">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 8px;">
+        <h1 class="page-title">Peer Mentorship</h1>
+        <a href="matches.html" class="btn btn-secondary">My Requests</a>
+    </div>
+    <p class="page-subtitle" style="margin-bottom: 32px;">Add your interests, then find a mentor or offer to mentor others.</p>
+
+    <div class="card" style="margin-bottom: 32px;">
+        <h3 style="margin-bottom: 20px;">Add an Interest</h3>
+        <div id="skillError" class="alert alert-error" style="display:none;"></div>
+        <form id="skillForm">
+            <div class="field-row" style="grid-template-columns: 2fr 1fr 1fr;">
+                <div class="field">
+                    <label for="interest">Interest</label>
+                    <input type="text" id="interest" placeholder="e.g. Photography" required>
+                </div>
+                <div class="field">
+                    <label for="role">I am a</label>
+                    <select id="role">
+                        <option value="LEARNER">Learner</option>
+                        <option value="MENTOR">Mentor</option>
+                    </select>
+                </div>
+                <div class="field" id="ratingField">
+                    <label for="selfRating">My Skill (1–5)</label>
+                    <input type="number" id="selfRating" min="1" max="5">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Add Interest</button>
+        </form>
+
+        <div id="myInterestsList" style="margin-top: 20px;"></div>
+    </div>
+
+    <div class="card">
+        <h3 style="margin-bottom: 20px;">Find a Mentor</h3>
+        <div class="search-bar" style="grid-template-columns: 1fr auto; margin-bottom: 24px;">
+            <div class="field" style="margin-bottom:0;">
+                <input type="text" id="searchInterest" placeholder="Search an interest, e.g. Guitar">
+            </div>
+            <button class="btn btn-primary" onclick="searchMentors()">Search</button>
+        </div>
+        <div id="mentorResults"></div>
+    </div>
+</div>
+
+<!-- Request modal -->
+<div id="requestModal" class="modal-overlay" style="display:none;">
+    <div class="modal-box">
+        <h3 style="margin-bottom:16px;">Send Mentorship Request</h3>
+        <div id="requestError" class="alert alert-error" style="display:none;"></div>
+        <form id="requestForm">
+            <div class="field">
+                <label for="requestMessage">Message (optional)</label>
+                <textarea id="requestMessage" placeholder="Introduce yourself..."></textarea>
+            </div>
+            <div style="display:flex; gap:10px;">
+                <button type="submit" class="btn btn-primary" style="flex:1;">Send Request</button>
+                <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/mentorship.js"></script>
+</body>
+</html>

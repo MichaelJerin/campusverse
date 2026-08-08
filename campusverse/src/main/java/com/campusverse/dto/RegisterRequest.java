@@ -3,6 +3,7 @@ package com.campusverse.dto;
 import com.campusverse.model.DegreeLevel;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
@@ -19,6 +20,10 @@ public class RegisterRequest {
     @NotBlank(message = "Password is required, Are you blind? did you expect me instruct you everytime")
     @Size(min = 8, message = "Password must be at least 8 character")
     private String password;
+
+    @NotBlank(message = "Phone number is required")
+    @Pattern(regexp = "^[0-9+\\-\\s]{7,15}$", message = "Enter a valid phone number")
+    private String phoneNumber;
 
     private String branch;
     private DegreeLevel degreeLevel;

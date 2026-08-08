@@ -50,7 +50,6 @@ document.getElementById("postItemForm").addEventListener("submit", async (e) => 
         description: document.getElementById("description").value,
         category: document.getElementById("category").value,
         location: document.getElementById("location").value,
-        contactNumber: document.getElementById("contactNumber").value,
         eventDate: document.getElementById("eventDate").value || null
     };
 

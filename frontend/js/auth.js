@@ -32,6 +32,7 @@ if (registerForm) {
             name: document.getElementById("name").value,
             email: document.getElementById("email").value,
             password: document.getElementById("password").value,
+            phoneNumber: document.getElementById("phoneNumber").value,
             branch: document.getElementById("branch").value,
             degreeLevel: document.getElementById("degreeLevel").value,
             batchStartYear: parseInt(document.getElementById("batchStartYear").value) || null,

@@ -30,7 +30,7 @@ public class ItemService {
                 .description(request.getDescription())
                 .category(request.getCategory())
                 .location(request.getLocation())
-                .contactNumber(request.getContactNumber())
+                .contactNumber(finder.getPhoneNumber())
                 .eventDate(request.getEventDate())
                 .user(finder)
                 .status(ItemStatus.OPEN)

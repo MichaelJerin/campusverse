@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusVerse — My Requests</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<div class="page-shell">
+    <h1 class="page-title">My Mentorship Requests</h1>
+    <p class="page-subtitle" style="margin-bottom: 24px;">Requests where you're the mentor, and requests you've sent as a mentee.</p>
+
+    <div class="tabs">
+        <button class="tab-btn active" id="tabIncoming" onclick="switchTab('incoming')">Incoming (as Mentor)</button>
+        <button class="tab-btn" id="tabOutgoing" onclick="switchTab('outgoing')">Outgoing (as Mentee)</button>
+    </div>
+
+    <div id="requestsList"></div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/matches.js"></script>
+</body>
+</html>
