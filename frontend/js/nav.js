@@ -5,7 +5,8 @@ function renderNavbar(active) {
     const links = [
         { key: "dashboard", label: "Dashboard", href: "dashboard.html" },
         { key: "lostfound", label: "Lost & Found", href: "items.html" },
-        { key: "mentorship", label: "Mentorship", href: "mentorship.html" }
+        { key: "mentorship", label: "Mentorship", href: "mentorship.html" },
+        { key: "businesses", label: "Businesses", href: "businesses.html" }
     ];
 
     el.innerHTML = `

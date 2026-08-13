@@ -42,6 +42,9 @@ app:
   auth:
     allowed-email-domain: ${COLLEGE_EMAIL_DOMAIN:college.edu}
 
+  moderation:
+    report-threshold: 5
+
 springdoc:
   swagger-ui:
     path: /swagger-ui.html

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusVerse — Local Businesses</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<div class="page-shell">
+    <h1 class="page-title">Local Business Discovery</h1>
+    <p class="page-subtitle" style="margin-bottom: 32px;">Student-curated shops and eateries near campus.</p>
+
+    <div class="card" style="margin-bottom: 32px;">
+        <h3 style="margin-bottom: 20px;">List a Business</h3>
+        <div id="postError" class="alert alert-error" style="display:none;"></div>
+        <form id="postBusinessForm">
+            <div class="field-row">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="field">
+                    <label for="category">Category</label>
+                    <input type="text" id="category" placeholder="e.g. Cafe, Print Shop" required>
+                </div>
+            </div>
+            <div class="field">
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="What makes this place worth knowing about"></textarea>
+            </div>
+            <div class="field-row">
+                <div class="field">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" required>
+                </div>
+                <div class="field">
+                    <label for="tags">Tags (comma-separated)</label>
+                    <input type="text" id="tags" placeholder="budget-friendly, late-night">
+                </div>
+                <div class="field">
+                    <label for="mapLink">Google Maps Link (optional)</label>
+                    <input type="url" id="mapLink" placeholder="Paste exact location link from Google Maps">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Add Listing</button>
+        </form>
+    </div>
+
+    <div class="search-bar" style="grid-template-columns: 2fr 1fr 1fr auto;">
+        <div class="field" style="margin-bottom:0;">
+            <input type="text" id="searchKeyword" placeholder="Search by name or description">
+        </div>
+        <div class="field" style="margin-bottom:0;">
+            <input type="text" id="searchCategory" placeholder="Category">
+        </div>
+        <div class="field" style="margin-bottom:0;">
+            <input type="text" id="searchTag" placeholder="Tag">
+        </div>
+        <button class="btn btn-primary" onclick="loadBusinesses()">Search</button>
+    </div>
+
+    <div id="businessList" class="items-grid"></div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/businesses.js"></script>
+</body>
+</html>

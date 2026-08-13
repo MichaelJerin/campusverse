@@ -210,3 +210,20 @@ h1, h2, h3 {
     padding-right: 40px;
     cursor: pointer;
 }
+
+.stars { color: #ff9500; font-size: 15px; letter-spacing: 1px; }
+.rating-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.rating-count { font-size: 13px; color: var(--text-secondary); }
+
+.tag-chip {
+    display: inline-block; font-size: 12px; font-weight: 600;
+    background: #f2f2f4; color: var(--text-secondary);
+    padding: 4px 10px; border-radius: 980px; margin: 0 6px 6px 0;
+}
+
+.review-item { padding: 16px 0; border-bottom: 1px solid var(--border); }
+.review-item:last-child { border-bottom: none; }
+.review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+
+.report-link { font-size: 13px; color: var(--danger); cursor: pointer; text-decoration: underline; }
+.edited-note { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
