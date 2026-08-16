@@ -227,3 +227,15 @@ h1, h2, h3 {
 
 .report-link { font-size: 13px; color: var(--danger); cursor: pointer; text-decoration: underline; }
 .edited-note { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
+
+.status-available { background: var(--success-bg); color: var(--success); }
+.status-reserved { background: var(--warning-bg); color: var(--warning); }
+.status-sold { background: #f2f2f4; color: var(--text-secondary); }
+
+.price-tag { font-size: 18px; font-weight: 700; color: var(--text); }
+.price-tag.exchange { font-size: 15px; font-weight: 600; color: var(--accent); }
+
+.items-grid .empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+}

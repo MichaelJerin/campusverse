@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusVerse — Listing Details</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<div class="page-shell" style="max-width: 720px;">
+
+    <div id="viewMode">
+        <div id="listingCard" class="card" style="margin-bottom: 24px;"></div>
+    </div>
+
+    <div id="editMode" class="card" style="display:none; margin-bottom: 24px;">
+        <h3 style="margin-bottom:16px;">Edit Listing</h3>
+        <div id="editError" class="alert alert-error" style="display:none;"></div>
+        <form id="editForm">
+            <div class="field-row">
+                <div class="field">
+                    <label for="editTitle">Title</label>
+                    <input type="text" id="editTitle" required>
+                </div>
+                <div class="field">
+                    <label for="editCategory">Category</label>
+                    <input type="text" id="editCategory" required>
+                </div>
+            </div>
+            <div class="field">
+                <label for="editDescription">Description</label>
+                <textarea id="editDescription"></textarea>
+            </div>
+            <div class="field-row" style="grid-template-columns: 1fr 1fr 1fr;">
+                <div class="field">
+                    <label for="editListingType">Type</label>
+                    <select id="editListingType">
+                        <option value="SELL">Sell</option>
+                        <option value="EXCHANGE">Exchange</option>
+                        <option value="EITHER">Either</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="editCondition">Condition</label>
+                    <select id="editCondition">
+                        <option value="NEW">New</option>
+                        <option value="LIKE_NEW">Like New</option>
+                        <option value="USED">Used</option>
+                        <option value="WORN">Worn</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="editPrice">Price (₹)</label>
+                    <input type="number" id="editPrice" min="0" step="0.01">
+                </div>
+            </div>
+            <div style="display:flex; gap:10px;">
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <button type="button" class="btn btn-secondary" onclick="cancelEdit()">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="requestSection" class="card" style="display:none; margin-bottom: 24px;">
+        <h3 style="margin-bottom:16px;">Request This Item</h3>
+        <div id="requestError" class="alert alert-error" style="display:none;"></div>
+        <form id="requestForm">
+            <div class="field">
+                <label for="requestMessage">Message (optional)</label>
+                <textarea id="requestMessage" placeholder="Your offer, or what you'd exchange"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Send Request</button>
+        </form>
+    </div>
+
+    <div id="requestsListSection" style="display:none;">
+        <h3 class="section-title" style="font-size:19px;">Requests on This Listing</h3>
+        <div id="requestsList"></div>
+    </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/listing-detail.js"></script>
+</body>
+</html>
